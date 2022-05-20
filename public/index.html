@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitize Shop</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+
+<body class="bg-slate-100">
+    <!-- app header -->
+    <header class="md:hidden px-4 mt-8 max-w-md mx-auto">
+        <div class="flex justify-between items-center">
+            <div>
+                Digitize
+            </div>
+            <div>
+                <h3 class="font-bold">ساعت هوشمند</h3>
+            </div>
+            <div class="bg-white shadow-lg w-7 h-7 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-slate-800" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+    </header>
+    <!-- app filter -->
+    <div class="md:hidden flex justify-around mt-6 px-2 mb-5">
+        <div class="bg-white flex justify-start items-center px-4 rounded-lg ">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 pt-2 ml-1 stroke-orange-600" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+                </svg>
+
+            </div>
+            <span>محبوب ترین</span>
+        </div>
+        <div class="bg-white  flex justify-start items-center  px-4 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 pt-1 ml-2 stroke-slate-400" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            <span>فیلتر : برند اپل</span>
+        </div>
+    </div>
+    <!-- desktop navbar -->
+    <nav class="hidden md:block bg-white px-4 py-2 sticky top-0 shadow-md mb-8 z-10 ">
+        <div class="flex items-center justify-between container mx-auto max-w-screen-2xl">
+            <ul class="flex items-center md:gap-x-0 lg:gap-x-4 text-slate-800">
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">LOGo</a></li>
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">خانه </a></li>
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">تلفن همراه</a></li>
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">لپ تاپ</a></li>
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">ساعت هوشمند</a></li>
+            </ul>
+            <!-- search Bar -->
+            <div class="flex-1 mr-4 xl:mr-6">
+                <div class="p-2 bg-gray-100 flex items-center rounded-lg  focus:shadow-md focus:shadow-orange-500">
+                    <span class="cursor-pointer hover:stroke-orange-500">
+                        <svg width="28" height="28" viewBox="0 0 28 28" class="hover:stroke-orange-500 stroke-slate-800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4167 24.5002C19.5378 24.5002 24.5 19.538 24.5 13.4168C24.5 7.29567 19.5378 2.3335 13.4167 2.3335C7.29552 2.3335 2.33334 7.29567 2.33334 13.4168C2.33334 19.538 7.29552 24.5002 13.4167 24.5002Z" stroke="#" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M25.6667 25.6668L23.3333 23.3335" stroke="#" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                    </span>
+                    <input type="text" placeholder="جستجو نام ممحصول نام برند و نام مدل ..." class="w-full bg-transparent focus:outline-none focus:border-none px-4 text-slate-800">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- desktop -->
+    <div class="container mx-auto max-w-screen-2xl px-4 grid grid-cols-12 grid-rows-[55px_minmax(500px,_1fr)] md:gap-8">
+        <!-- sidebar -->
+        <div class="hidden md:block md:col-span-4 lg:col-span-3  xl:col-span-2 row-span-2">
+            <div class="bg-white p-5 rounded-xl max-h-[calc(100vh-120px)] overflow-auto  sticky md:top-[4.3rem] lg:top-[4.7rem]">
+                <!-- sort Brand -->
+                <div class="mt-1 space-y-2">
+                    <h2 class="text-orange-500 font-bold text-lg lg:text-xl">دسته بندی</h2>
+                    <ul>
+                        <li class="relative py-2">
+                            <a href="#" class="flex items-center">
+                                <svg width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.421 17.446v10.263c0 4.105-1.026 5.132-5.131 5.132H6.131C2.026 32.84 1 31.814 1 27.709V17.446c0-4.105 1.026-5.132 5.132-5.132h6.158c4.105 0 5.131 1.027 5.131 5.132ZM11.263 15.907H7.158"
+                                    class="stroke-slate-800" stroke-width="1.125" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M9.21 29.865a1.59 1.59 0 1 0 0-3.182 1.59 1.59 0 0 0 0 3.182Z" class="stroke-slate-800"
+                                    stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="14" cy="13" r="13" fill="#AFAFAF" fill-opacity=".29" />
+                            </svg>
+                            <span class="mr-2 text-slate-800 font-medium text-sm lg:text-md xl:text-md mt-3">تلفن همراه</span>
+                            </a>
+                        </li>
+                        <li class="relative py-2">
+                            <a href="#" class="flex items-center">
+                                <svg width="32" height="34" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="17" cy="14.0435" r="14.0435" fill="#AFAFAF" fill-opacity="0.29"/>
+                                    <path d="M6.34666 12.3188H17.2956C20.804 12.3188 21.6812 13.1959 21.6812 16.6945V22.9328C21.6812 26.4412 20.8041 27.3084 17.3055 27.3084H6.34666C2.84811 27.3183 1.97101 26.4412 1.97101 22.9426V16.6945C1.97101 13.1959 2.84811 12.3188 6.34666 12.3188Z" class="stroke-slate-500" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.8261 27.3184V32.0291" class="stroke-slate-500" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.97101 23.1592H21.6812" class="stroke-slate-500" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.3913 32.0288H16.2609" class="stroke-slate-500" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    
+                            <span class="mr-2 text-gray-300  text-sm lg:text-md xl:text-md mt-3">لپ تاپ</span>
+                            </a>
+                        </li>
+                        <li class="relative py-2">
+                            <a href="#" class="flex items-center">
+                                <svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="17.7727" cy="14.6818" r="14.6818" fill="#AFAFAF" fill-opacity="0.29"/>
+                                    <path d="M8.75731 28.849H15.9694C18.37 28.849 19.5755 27.6436 19.5755 25.243V18.0309C19.5755 15.6303 18.37 14.4248 15.9694 14.4248H8.75731C6.3567 14.4248 5.15125 15.6303 5.15125 18.0309V25.243C5.15125 27.6436 6.3567 28.849 8.75731 28.849Z" class="stroke-slate-500" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16.4846 11.334H8.24213" class="stroke-slate-500" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16.4846 31.939H8.24213" class="stroke-slate-500" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.8488 19.0615V22.1524H14.9397" class="stroke-slate-500" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    
+                            <span class="mr-2 text-gray-300  text-sm lg:text-md xl:text-md mt-3">ساعت هوشمند</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="mt-4">
+                <!-- sort filter -->
+                <div class="mt-2 space-y-6">
+                    <h2 class="text-lg xl:text-xl font-bold text-orange-500">فیلتر</h2>
+                    <!-- Acc num 1 -->
+                    <!-- acc num 1 header -->
+                    <div class="accBtn px-2 mt-3 cursor-pointer select-none">
+                        <div class=" flex justify-between items-center">
+                            <span class="flex items-center">
+                                <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="13.3636" cy="12.0909" r="12.0909" fill="#AFAFAF" fill-opacity="0.29"/>
+                                    <path d="M16.3333 27.0716H1.48486C1.18046 27.0716 0.92804 26.8192 0.92804 26.5148C0.92804 26.2104 1.18046 25.958 1.48486 25.958H16.3333C16.6377 25.958 16.8901 26.2104 16.8901 26.5148C16.8901 26.8192 16.6377 27.0716 16.3333 27.0716Z" fill="#222F5D"/>
+                                    <path d="M2.74712 26.5148H1.63348L1.67061 17.5834C1.67061 16.9524 1.96015 16.3659 2.45757 15.9798L7.65452 11.9336C8.38952 11.362 9.42149 11.362 10.1639 11.9336L15.3609 15.9724C15.8509 16.3585 16.1478 16.9598 16.1478 17.5834V26.5148H15.0342V17.5909C15.0342 17.3088 14.9006 17.0341 14.6778 16.8559L9.48088 12.8171C9.14679 12.5573 8.67907 12.5573 8.33755 12.8171L3.1406 16.8633C2.91788 17.0341 2.78424 17.3088 2.78424 17.5909L2.74712 26.5148Z" fill="#222F5D"/>
+                                    <path d="M12.6212 27.0718H5.19695C4.89256 27.0718 4.64014 26.8193 4.64014 26.515V19.462C4.64014 18.5413 5.38998 17.7915 6.31058 17.7915H11.5075C12.4281 17.7915 13.178 18.5413 13.178 19.462V26.515C13.178 26.8193 12.9256 27.0718 12.6212 27.0718ZM5.75377 25.9581H12.0643V19.462C12.0643 19.1576 11.8119 18.9051 11.5075 18.9051H6.31058C6.00619 18.9051 5.75377 19.1576 5.75377 19.462V25.9581Z" fill="#222F5D"/>
+                                    <path d="M7.42419 23.9162C7.11979 23.9162 6.86737 23.6638 6.86737 23.3594V22.2458C6.86737 21.9414 7.11979 21.689 7.42419 21.689C7.72858 21.689 7.981 21.9414 7.981 22.2458V23.3594C7.981 23.6638 7.72858 23.9162 7.42419 23.9162Z" fill="#222F5D"/>
+                                    <path d="M10.0227 16.3065H7.7954C7.49101 16.3065 7.23859 16.0541 7.23859 15.7497C7.23859 15.4453 7.49101 15.1929 7.7954 15.1929H10.0227C10.3271 15.1929 10.5795 15.4453 10.5795 15.7497C10.5795 16.0541 10.3271 16.3065 10.0227 16.3065Z" fill="#222F5D"/>
+                                </svg>        
+                                <span class="text-md mr-2">برند محصول</span>                                   
+                            </span>
+                            <div class="transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- acc num1 contnet -->
+                     <div class="AccDropDown  px-4 transition delay-150 duration-300 ease-in-out">
+                        <label for="apple" class="block py-1">
+                            <input type="checkbox" name="brnad" id="apple" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                            <span class="mr-1">اپل</span>
+                        </label> 
+                        <label for="xiaomi" class="block py-1">
+                            <input type="checkbox" name="brnad" id="xiaomi" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                            <span class="mr-1">شیائومی</span>
+                        </label>
+                        <label for="samsung" class="block py-1">
+                             <input type="checkbox" name="brnad" id="samsung" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                             <span class="mr-1">سامسونگ</span>
+                         </label> 
+                         <label for="huawei" class="block py-1">
+                             <input type="checkbox" name="brnad" id="huawei" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                             <span class="mr-1">هواوی</span>
+                         </label>
+                     </div>
+                    <!-- Acc num 2 -->
+                    <!-- acc num 2 header -->
+                    <div class="accBtn px-2 mt-4 cursor-pointer select-none">
+                        <div class=" flex justify-between items-center">
+                            <span class="flex items-center">
+                                <svg width="26" height="28" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.83335 9.62484V17.4998C5.83335 18.1298 5.57668 18.7073 5.16834 19.1273L5.14502 19.1507C5.09252 19.2032 5.03419 19.2557 4.98169 19.2965C4.80669 19.4482 4.60835 19.5648 4.40418 19.6465C4.34001 19.6757 4.27585 19.699 4.21169 19.7223C3.98419 19.7982 3.73919 19.8332 3.50002 19.8332C3.34252 19.8332 3.18503 19.8157 3.03336 19.7865C2.95753 19.769 2.88169 19.7515 2.80585 19.7282C2.71252 19.699 2.62502 19.6698 2.53752 19.629C2.53752 19.6232 2.53752 19.6232 2.53168 19.629C2.36835 19.5473 2.21086 19.454 2.06503 19.3432L2.05919 19.3373C1.98335 19.279 1.91336 19.2207 1.84919 19.1507C1.78503 19.0807 1.72085 19.0107 1.65668 18.9348C1.54585 18.789 1.45252 18.6315 1.37086 18.4682C1.37669 18.4623 1.37669 18.4623 1.37086 18.4623C1.37086 18.4623 1.37085 18.4565 1.36502 18.4507C1.33002 18.369 1.30085 18.2815 1.27168 18.194C1.24835 18.1182 1.23085 18.0423 1.21335 17.9665C1.18418 17.8148 1.16669 17.6573 1.16669 17.4998V9.62484C1.16669 8.74984 1.75002 8.1665 2.62502 8.1665H4.37502C5.25002 8.1665 5.83335 8.74984 5.83335 9.62484Z" stroke="#222F5D" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.8333 16.6248V18.3748C12.8333 19.2498 12.25 19.8332 11.375 19.8332H3.5C3.73917 19.8332 3.98417 19.7982 4.21167 19.7223C4.27583 19.699 4.33999 19.6757 4.40416 19.6465C4.60833 19.5648 4.80667 19.4482 4.98167 19.2965C5.03417 19.2557 5.0925 19.2032 5.145 19.1507L5.16832 19.1273L9.135 15.1665H11.375C12.25 15.1665 12.8333 15.7498 12.8333 16.6248Z" stroke="#222F5D" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2.80578 19.7285C2.45578 19.6235 2.12329 19.431 1.84912 19.151C1.56912 18.8768 1.37661 18.5443 1.27161 18.1943C1.49911 18.9235 2.07661 19.501 2.80578 19.7285Z" stroke="#222F5D" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.7158 13.5857L9.13495 15.1666L5.16827 19.1274C5.57661 18.7074 5.83328 18.1299 5.83328 17.4999V11.8649L7.41411 10.2841C8.03244 9.66573 8.86078 9.66573 9.47912 10.2841L10.7158 11.5207C11.3341 12.1391 11.3341 12.9674 10.7158 13.5857Z" stroke="#222F5D" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.50002 18.0832C3.82219 18.0832 4.08335 17.822 4.08335 17.4998C4.08335 17.1777 3.82219 16.9165 3.50002 16.9165C3.17785 16.9165 2.91669 17.1777 2.91669 17.4998C2.91669 17.822 3.17785 18.0832 3.50002 18.0832Z" stroke="#222F5D" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="9.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity="0.29"/>
+                                    </svg>
+                                           
+                                <span class="text-md mr-2">رنگ محصول</span>                                   
+                            </span>
+                            <div class="transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- acc num 2content -->
+                    <div class="AccDropDown hidden px-4 transition delay-150 duration-300 ease-in-out">
+                        <label for="red" class="block py-1">
+                            <input type="checkbox" name="brnad" id="red" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                            <span class="mr-1">قرمز </span>
+                        </label> 
+                        <label for="dark" class="block py-1">
+                            <input type="checkbox" name="brnad" id="dark" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                            <span class="mr-1">دارک</span>
+                        </label>
+                        <label for="white" class="block py-1">
+                             <input type="checkbox" name="brnad" id="white" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                             <span class="mr-1">سفید</span>
+                         </label> 
+                         <label for="gray" class="block py-1">
+                             <input type="checkbox" name="brnad" id="gray" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                             <span class="mr-1">خاکستری</span>
+                         </label>
+                         <label for="oilblue" class="block py-1">
+                            <input type="checkbox" name="brnad" id="oilblue" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                            <span class="mr-1">آبی نفتی </span>
+                        </label>
+                        <label for="ringblue" class="block py-1">
+                            <input type="checkbox" name="brnad" id="ringblue" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                            <span class="mr-1">آبی صدفی </span>
+                        </label>
+                        <label for="ringwhitre" class="block py-1">
+                            <input type="checkbox" name="brnad" id="ringwhite" class="form-checkbox rounded focus:ring-1 focus:ring-orange-500 text-orange-500 checked:bg-none">
+                            <span class="mr-1">سفید صدفی </span>
+                        </label>
+                        <input type="checkbox" name="" id="">
+                     </div>
+                     <!-- ACC num 3 -->
+                     <!-- acc num 3 header -->
+                     <div class="accBtn px-2 mt-4 cursor-pointer select-none">
+                        <div class=" flex justify-between items-center">
+                            <span class="flex items-center">
+                                <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5234 14.9038C10.2784 15.143 10.1384 15.4872 10.1734 15.8547C10.2259 16.4847 10.8034 16.9455 11.4334 16.9455H12.5418V17.6397C12.5418 18.8472 11.5559 19.833 10.3484 19.833H3.65177C2.44427 19.833 1.45844 18.8472 1.45844 17.6397V13.7138C1.45844 12.5063 2.44427 11.5205 3.65177 11.5205H10.3484C11.5559 11.5205 12.5418 12.5063 12.5418 13.7138V14.5538H11.3634C11.0368 14.5538 10.7393 14.6822 10.5234 14.9038Z" stroke="#222F5D" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.45844 14.2388V11.573C1.45844 10.8788 1.88427 10.2604 2.53177 10.0154L7.16343 8.26544C7.88677 7.99127 8.6626 8.52796 8.6626 9.30379V11.5205" stroke="#222F5D" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1593 15.1492V16.3509C13.1593 16.6717 12.9026 16.9342 12.576 16.9459H11.4326C10.8026 16.9459 10.2251 16.485 10.1726 15.855C10.1376 15.4875 10.2776 15.1434 10.5226 14.9042C10.7385 14.6825 11.036 14.5542 11.3626 14.5542H12.576C12.9026 14.5659 13.1593 14.8283 13.1593 15.1492Z" stroke="#222F5D" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.08331 14H8.16665" stroke="#222F5D" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M27 12.5C27 19.4036 21.4036 25 14.5 25C7.59644 25 2 19.4036 2 12.5C2 5.59644 7.59644 0 14.5 0C21.4036 0 27 5.59644 27 12.5Z" fill="#AFAFAF" fill-opacity="0.29"/>
+                                    </svg>                                     
+                                <span class="text-md mr-2">محدوده قیمت</span>                                   
+                            </span>
+                            <div class="transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  acc num 3 content -->
+                    <div class="price-sort hidden px-4 transition delay-150 duration-300 ease-in-out">
+                        <h5 class="text-sm  mb-4 font-bold">قیمت :از  1 میلیون تا ...</h5>
+                        <label for="dark" class="block py-1 mt-4">
+                            <input type="range" name="brnad" id="dark" class="form-range  text-orange-500 bg-orange-500  h-2 rounded-lg  w-full  " min="1" max="30" value="0">
+                        </label>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- sort section -->
+        <div class="sort-section hidden md:block  md:col-span-8 lg:col-span-9 xl:col-span-10  rounded-lg">
+            <div class="bg-white flex items-center gap-x-4 px-4 rounded-lg text-gray-300 text-md">
+                <div class="bg-red-200 w-8 h-8 rounded-md flex items-center justify-center mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 stroke-orange-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+                    </svg>
+                </div>
+                <button class="py-4 text-slate-800 font-bold relative">
+                    <span>محبوب ترین</span>
+                    <span class="w-2 h-2 rounded-full bg-orange-500 absolute top-3 -left-2"></span>
+                </button>
+                <button class="py-4">
+                    <span> پربازدید ترین</span>
+                    <span class="hidden w-2 h-2 rounded-full bg-orange-500 absolute top-3 -left-2"></span>
+                </button>
+                <button class="py-4">
+                    <span> گران ترین</span>
+                    <span class="hidden w-2 h-2 rounded-full bg-orange-500 absolute top-3 -left-2"></span>
+                </button>
+                <button class="py-4">
+                    <span> ارزان ترین</span>
+                    <span class="hidden w-2 h-2 rounded-full bg-orange-500 absolute top-3 -left-2"></span>
+                </button>
+            </div>
+        </div>
+        <!-- product -->
+        <div class="col-span-12 md:col-span-8 lg:col-span-9  xl:col-span-10">
+
+            <div class="productsMobileData px-2 md:px-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                <div class="bg-white p-2 rounded-xl">
+                    <!-- cart image -->
+                    <div class="p-2 bg-slate-200 rounded-lg">
+                        <img src="${element.imageUrl}" alt="">
+                    </div>
+                    <!-- cart Content -->
+                    <div class="p-2">
+                        <!-- content brnad -->
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">اپل</span>
+                            <div class="circle flex justify-center items-center">
+                                <button data-id="1"
+                                    class="colorRange bg-yellow-400 w-5 h-5 rounded-full border-2 border-white focus:ring-2 focus:ring-offset-0  focus:ring-orange-500 focus:ml-2"></button>
+                                <button data-id="2"
+                                    class="colorRange bg-gray-800 w-5 h-5 rounded-full border-2 border-white -mr-2 focus:ring-2 focus:ring-offset-0  focus:ring-orange-500 focus:ml-2 "></button>
+                                <button data-id="3"
+                                    class="colorRange bg-slate-400 w-5 h-5 rounded-full border-2 border-white -mr-2 focus:ring-2 focus:ring-offset-0  focus:ring-orange-500 focus:-ml-0"></button>
+                            </div>
+                        </div>
+                        <!--contnt title  -->
+                        <div class="pt-2">
+                            <h3 class="text-slate-900 text-sm font-bold">${element.title}</h3>
+                        </div>
+                        <!-- content price -->
+                        <div class="pt-2">
+                            <span class="text-orange-700 text-xs">${element.price} تومان</span>
+                        </div>
+                        <hr class="mt-2 bg-orange-700">
+                        <!-- contet -->
+                        <button class="w-full pt-2 text-orange-700 text-xs sm:text-sm font-bold">مشاهده و
+                            سفارشات</button>
+                    </div>
+                </div>;
+            </div>
+        </div>
+
+    </div>
+    <!-- buttom-navigation -->
+    <div class="block md:hidden bg-white px-4  fixed bottom-0 left-0 right-0 w-full rounded-tr-md rounded-tl-md">
+        <nav class="w-full">
+            <ul class="flex items-center justify-between gap-x-2 w-full text-gray-400">
+                <li class="bottom-nav flex-auto text-slate-800">
+                    <a href="#" class="flex items-center justify-center text-sm py-4">
+                        <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m20.04 6.82-5.76-4.03c-1.57-1.1-3.98-1.04-5.49.13L3.78 6.83c-1 .78-1.79 2.38-1.79 3.64v6.9c0 2.55 2.07 4.63 4.62 4.63h10.78c2.55 0 4.62-2.07 4.62-4.62V10.6c0-1.35-.87-3.01-1.97-3.78ZM12.75 18c0 .41-.34.75-.75.75s-.75-.34-.75-.75v-3c0-.41.34-.75.75-.75s.75.34.75.75v3Z" fill="currentColor"/>
+                        </svg>
+                        <span class="mr-2">خانه</span>
+                    </a>
+                </li>
+                <li class="bottom-nav flex-auto ">
+                    <a href="#" class="flex items-center justify-center text-sm py-4 ">
+                        <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.24 2h-1.9C3.15 2 2 3.15 2 5.33v1.9c0 2.18 1.15 3.33 3.33 3.33h1.9c2.18 0 3.33-1.15 3.33-3.33v-1.9C10.57 3.15 9.42 2 7.24 2ZM18.67 2h-1.9c-2.18 0-3.33 1.15-3.33 3.33v1.9c0 2.18 1.15 3.33 3.33 3.33h1.9c2.18 0 3.33-1.15 3.33-3.33v-1.9C22 3.15 20.85 2 18.67 2ZM18.67 13.43h-1.9c-2.18 0-3.33 1.15-3.33 3.33v1.9c0 2.18 1.15 3.33 3.33 3.33h1.9c2.18 0 3.33-1.15 3.33-3.33v-1.9c0-2.18-1.15-3.33-3.33-3.33ZM7.24 13.43h-1.9C3.15 13.43 2 14.58 2 16.76v1.9C2 20.85 3.15 22 5.33 22h1.9c2.18 0 3.33-1.15 3.33-3.33v-1.9c.01-2.19-1.14-3.34-3.32-3.34Z"/>
+                        </svg>
+                        <span class="hidden mr-2">دسته بندی</span>
+                    </a>
+                </li>
+                <li class="bottom-nav flex-auto ">
+                    <a href="#" class="flex items-center  justify-center text-sm py-4 ">
+                        <svg width="26" height="26" class="" fill="currentColor"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.623 9.707c-.726-.802-1.82-1.268-3.336-1.43v-.824a5.277 5.277 0 0 0-1.734-3.91 5.251 5.251 0 0 0-4.073-1.355c-2.59.25-4.767 2.752-4.767 5.46v.629c-1.516.162-2.61.628-3.336 1.43-1.051 1.17-1.019 2.73-.9 3.813l.759 6.034c.227 2.113 1.083 4.28 5.741 4.28h6.045c4.659 0 5.515-2.167 5.742-4.27l.758-6.055c.12-1.072.141-2.632-.899-3.802Zm-8.991-6.013a3.772 3.772 0 0 1 4.149 3.76v.758H9.219v-.564c0-1.928 1.593-3.78 3.413-3.954Zm-3.51 10.552H9.11a1.087 1.087 0 0 1-1.084-1.084 1.089 1.089 0 0 1 2.178 0c0 .596-.488 1.084-1.083 1.084Zm7.583 0h-.01a1.087 1.087 0 0 1-1.084-1.084 1.089 1.089 0 0 1 2.178 0c0 .596-.488 1.084-1.084 1.084Z" fill="currentColor"/>
+                        </svg>
+                        <span class="hidden mr-2">سبد خرید</span>
+                    </a>
+                </li>
+                <li class="bottom-nav flex-auto ">
+                    <a href="#" class="flex items-center justify-center text-sm py-4">
+                        <svg width="23" height="21" viewBox="0 0 23 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.6665 0.666504C14.6576 0.666504 12.8621 1.64428 11.7421 3.13762C10.6221 1.64428 8.8265 0.666504 6.81761 0.666504C3.42206 0.666504 0.666504 3.43984 0.666504 6.85317C0.666504 8.16873 0.879837 9.39539 1.23539 10.5154C2.97761 16.0443 8.38206 19.3687 11.0487 20.2754C11.4221 20.3998 12.0443 20.3998 12.4176 20.2754C15.0843 19.3687 20.4887 16.0621 22.2309 10.5154C22.6043 9.37762 22.7998 8.16873 22.7998 6.85317C22.8176 3.43984 20.0621 0.666504 16.6665 0.666504Z" fill="currentColor"/>
+                        </svg>
+                        <span class="hidden mr-2">علاقه مندی</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+<script src="./../src/js/app.js" type="module"></script>
+
+</html>
