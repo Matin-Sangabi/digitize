@@ -653,6 +653,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex-wrap{
   flex-wrap: wrap;
 }
+.items-start{
+  align-items: flex-start;
+}
 .items-center{
   align-items: center;
 }
@@ -681,6 +684,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+}
+.gap-y-6{
+  row-gap: 1.5rem;
 }
 .gap-y-2{
   row-gap: 0.5rem;
@@ -1008,8 +1014,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:mr-8{
     margin-right: 2rem;
   }
+  .md\:mt-6{
+    margin-top: 1.5rem;
+  }
+  .md\:mt-4{
+    margin-top: 1rem;
+  }
   .md\:block{
     display: block;
+  }
+  .md\:flex{
+    display: flex;
   }
   .md\:hidden{
     display: none;
@@ -1028,6 +1043,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
   .md\:items-start{
     align-items: flex-start;
+  }
+  .md\:items-center{
+    align-items: center;
   }
   .md\:justify-start{
     justify-content: flex-start;
@@ -1079,12 +1097,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
   .lg\:block{
     display: block;
-  }
-  .lg\:inline{
-    display: inline;
-  }
-  .lg\:flex{
-    display: flex;
   }
   .lg\:w-1\/4{
     width: 25%;
