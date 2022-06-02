@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سبد خرید</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+<body class="bg-stone-100">
+     <!-- header -->
+     <header class="md:hidden px-4 mt-8 max-w-md mx-auto mb-6">
+        <div class="flex justify-between items-center">
+            <div class="bg-white shadow-lg w-7 h-7 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+            </div>
+            <div>
+                <h3 class="font-bold">سبد خرید</h3>
+            </div>
+            <div class="bg-white shadow-lg w-7 h-7 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-slate-800" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- desktop navbar -->
+    <nav class="hidden md:block bg-white px-4 py-2 sticky top-0 shadow-md mb-8 z-10 ">
+        <div class="flex items-center justify-between container mx-auto max-w-screen-2xl">
+            <ul class="flex items-center md:gap-x-0 lg:gap-x-4 text-slate-800">
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">LOGo</a></li>
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">خانه </a></li>
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">تلفن همراه</a></li>
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">لپ تاپ</a></li>
+                <li><a href="#" class="block md:p-3 lg:p-4 hover:bg-gray-100 transition-all duration-500 rounded-md">ساعت هوشمند</a></li>
+            </ul>
+            <!-- search Bar -->
+            <div class="flex-1 mr-4 xl:mr-6">
+                <div class="p-2 bg-gray-100 flex items-center rounded-lg  focus:shadow-md focus:shadow-orange-500">
+                    <span class="cursor-pointer hover:stroke-orange-500">
+                        <svg width="28" height="28" viewBox="0 0 28 28" class="hover:stroke-orange-500 stroke-slate-800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4167 24.5002C19.5378 24.5002 24.5 19.538 24.5 13.4168C24.5 7.29567 19.5378 2.3335 13.4167 2.3335C7.29552 2.3335 2.33334 7.29567 2.33334 13.4168C2.33334 19.538 7.29552 24.5002 13.4167 24.5002Z" stroke="#" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M25.6667 25.6668L23.3333 23.3335" stroke="#" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                    </span>
+                    <input type="text" placeholder="جستجو نام ممحصول نام برند و نام مدل ..." class="w-full bg-transparent focus:outline-none focus:border-none px-4 text-slate-800">
+                </div>
+            </div>
+        </div>
+    
+    </nav>
+
+    <!-- cart items -->
+    <div class="px-4 flex flex-col gap-y-2">
+        <div class="bg-white flex items-stretch shadow-lg rounded-lg p-3 gap-x-2">
+            <div class="w-20 h-auto ">
+                <img src="./../assets/images/gray.png" class="w-full h-auto" alt="">
+            </div>
+            <div class="flex-auto flex flex-col justify-around text-sm">
+                <span class="text-slate-800 font-bold">ساعت هومشند اپل سری 7</span>
+                <span class="text-orange-500">12,350,000 تومان</span>
+            </div>
+            <div class="flex flex-col items-end justify-between">
+                <span class="text-orange-400 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </span>
+                <div class="flex items-center justify-center gap-x-1 pb-2">
+                    <span class="flex items-center justify-center w-5 h-5 text-slate-800 rounded-full bg-gray-300 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </span>
+                    <span class="w-5 h-7 border border-orange-500 rounded-md flex justify-center items-center text-sm font-bold">1</span>
+                    <span  class="flex items-center justify-center w-5 h-5 text-orange-600 rounded-full bg-orange-200 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                          </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white flex items-stretch shadow-lg rounded-lg p-3 gap-x-2">
+            <div class="w-20 h-auto ">
+                <img src="./../assets/images/gray.png" class="w-full h-auto" alt="">
+            </div>
+            <div class="flex-auto flex flex-col justify-around text-sm">
+                <span class="text-slate-800 font-bold">ساعت هومشند اپل سری 7</span>
+                <span class="text-orange-500">12,350,000 تومان</span>
+            </div>
+            <div class="flex flex-col items-end justify-between">
+                <span class="text-orange-400 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </span>
+                <div class="flex items-center justify-center gap-x-1 pb-2">
+                    <span class="flex items-center justify-center w-5 h-5 text-slate-800 rounded-full bg-gray-300 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </span>
+                    <span class="w-5 h-7 border border-orange-500 rounded-md flex justify-center items-center text-sm font-bold">1</span>
+                    <span  class="flex items-center justify-center w-5 h-5 text-orange-600 rounded-full bg-orange-200 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                          </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white flex items-stretch shadow-lg rounded-lg p-3 gap-x-2">
+            <div class="w-20 h-auto ">
+                <img src="./../assets/images/gray.png" class="w-full h-auto" alt="">
+            </div>
+            <div class="flex-auto flex flex-col justify-around text-sm">
+                <span class="text-slate-800 font-bold">ساعت هومشند اپل سری 7</span>
+                <span class="text-orange-500">12,350,000 تومان</span>
+            </div>
+            <div class="flex flex-col items-end justify-between">
+                <span class="text-orange-400 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </span>
+                <div class="flex items-center justify-center gap-x-1 pb-2">
+                    <span class="flex items-center justify-center w-5 h-5 text-slate-800 rounded-full bg-gray-300 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </span>
+                    <span class="w-5 h-7 border border-orange-500 rounded-md flex justify-center items-center text-sm font-bold">1</span>
+                    <span  class="flex items-center justify-center w-5 h-5 text-orange-600 rounded-full bg-orange-200 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                          </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</body>
+</html>
